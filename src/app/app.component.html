@@ -1,8 +1,30 @@
-<app-orbit-list [satellites]="sourceList"></app-orbit-list>
+
 <app-orbit-list [satellites]="displayList"></app-orbit-list>
+ <app-orbit-counts></app-orbit-counts> 
 
 <div class="search-form">
     <label >Search:</label>
     <input #searchTerm (keyup.enter)="search(searchTerm.value)" type="text"/>
     <button (click)="search(searchTerm.value)">Search</button>
 </div>
+
+<h3>Satellite Counts:</h3>
+<!--<div class="counts">
+   <div>Total: <span>{{satelliteTotals[0]}}</span></div>
+    <div>Space Debris: <span>{{satelliteTotals[1]}}</span></div>
+   <div>Communication: <span>{{satelliteTotals[2]}}</span></div>
+   <div>Probe: <span>{{satelliteTotals[3]}}</span></div>
+   <div>Positioning: <span>{{satelliteTotals[4]}}</span></div>
+   <div>Space Station: <span>{{satelliteTotals[5]}}</span></div>
+   <div>Telescope: <span>{{satelliteTotals[6]}}</span></div>
+</div> -->
+<table>
+    <tr class="hide-heading">
+       <th>Satellite Name</th>
+       <th>Satelite Totals</th> 
+    </tr>
+    <tr *ngFor ="let total of satelliteTotals; let i = index" class="table-data">   
+        <td>{{displayNames[i]}}</td> 
+        <td>{{satelliteTotals[i]}}</td>
+    </tr> 
+ </table>

@@ -11,3 +11,31 @@ button {
     font-size: 18px;
     cursor: pointer;
 }
+
+.counts {
+    background: #34495E;
+    color: #fff;
+    border-radius: 5px;
+    width: 225px;
+}
+
+.counts div {
+    padding: 8px;
+}
+
+.counts span {
+    float: right;
+}
+
+.table-data {
+    background: #34495E;
+    color: #fff;
+    text-align: left;
+    margin: 5px 10px;
+    padding: 6px;
+    width: 225px;
+
+}
+.hide-heading {
+    visibility: hidden;
+}
